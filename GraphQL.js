@@ -1,6 +1,5 @@
 const { ApolloServer, gql } = require('apollo-server');
 
-// Definir esquema
 const typeDefs = gql`
   type Producto {
     id: ID!
@@ -13,10 +12,8 @@ const typeDefs = gql`
   }
 `;
 
-// Datos simulados
 const productos = [{ id: "1", nombre: "Manzana", precio: 0.5 }];
 
-// Resolver funciones
 const resolvers = {
   Query: {
     productos: () => productos,
